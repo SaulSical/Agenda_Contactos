@@ -8,4 +8,5 @@ btnSingIn.addEventListener("click", () => {
 
 btnSingUp.addEventListener("click", () => {
     container.classList.add("toggle");
+    
 });

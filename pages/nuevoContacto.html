@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Contacto</title>
+    <link rel="stylesheet" href="../css/nuevoContacto.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Ionicons para íconos del menú -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidebar lateral (igual que en contactos y perfil) -->
+    <aside class="sidebar">
+        <!-- Perfil fijo arriba -->
+        <!-- Perfil fijo arriba - toda la zona clickable -->
+<div class="sidebar-user">
+    <a href="perfil.html" class="profile-link">
+        <div class="user-info">
+            <div class="foto-wrapper-header">
+                <img src="../images/messi.png" class="usuario-foto" alt="Foto de perfil">
+                <span class="status online status-header"></span>
+            </div>
+            <div class="user-text">
+                <span class="nombre">craks</span>
+                <small>craks@gmail.com</small>
+            </div>
+        </div>
+    </a>
+</div>
+
+        <!-- Menú -->
+        <nav class="sidebar-nav">
+            <a href="contactos.html" class="sidebar-item">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                <span>Volver</span>
+            </a>
+            <a href="../index.html" class="sidebar-item btn-cerrar">
+                <ion-icon name="log-out-outline"></ion-icon>
+                <span>Cerrar sesión</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <div class="main-wrapper">
+        <main class="main-content">
+            <h1>Añade un Nuevo Contacto</h1>
+
+            <form action="contactos.html" class="contact-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Nombre" required>
+                </div>
+                <div class="input-group">
+                    <input type="tel" placeholder="Teléfono" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" placeholder="Correo electrónico" required>
+                </div>
+
+                <button type="submit" class="button">GUARDAR</button>
+            </form>
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #F0F4F3;
+    display: flex;
+    color: #333;
+}
+
+/* Sidebar (igual que contactos, perfil, nuevo contacto) */
+.sidebar {
+    width: 260px;
+    background: #3AB397;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+}
+
+.sidebar-user {
+    padding: 24px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: all 0.25s;
+}
+
+.profile-link:hover {
+    background: rgba(255,255,255,0.12);
+    border-radius: 8px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.foto-wrapper-header {
+    position: relative;
+}
+
+.usuario-foto {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.status-header {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2.5px solid #3AB397;
+    background: white;
+}
+
+.nombre {
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+.user-text small {
+    color: rgba(255,255,255,0.9);
+    font-size: 0.88rem;
+    display: block;
+}
+
+.sidebar-nav {
+    flex: 1;
+    margin-top: 15px;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.25s;
+}
+
+.sidebar-item ion-icon {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.sidebar-item:hover {
+    background: #3AA8AD;
+}
+
+.btn-cerrar {
+    margin-top: auto;
+}
+
+/* Contenido principal */
+.main-wrapper {
+    flex: 1;
+    margin-left: 260px;
+    padding: 30px;
+}
+
+.main-content {
+    flex: 1;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 2.5rem;
+    text-align: center;
+}
+
+/* Grid de favoritos */
+.favoritos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.6rem;
+}
+
+/* Tarjeta favorito */
+.favorito-card {
+    background: white;
+    border-radius: 14px;
+    padding: 24px 16px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+    position: relative;
+}
+
+.favorito-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(58,179,151,0.18);
+}
+
+.foto-wrapper {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 14px;
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3AB397;
+}
+
+.icono-favorito {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 1.8rem;
+    color: #e74c3c; /* rojo corazón */
+}
+
+.favorito-card h3 {
+    font-size: 1.15rem;
+    color: #222;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .sidebar { width: 80px; }
+    .sidebar-user .user-text span,
+    .sidebar-user .user-text small,
+    .sidebar-item span { display: none; }
+    .sidebar-item { justify-content: center; padding: 16px 0; }
+    .main-wrapper { margin-left: 80px; }
+}
+
+@media (max-width: 768px) {
+    .sidebar { width: 0; overflow: hidden; }
+    .main-wrapper { margin-left: 0; }
+    .favoritos-grid { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+}

@@ -11,7 +11,7 @@
     
     <div class="container">
         <div class = container-form >
-            <form class="sign-in">
+            <form class="sign-in" onsubmit="login(event)">
                 <h2>Iniciar Sesion</h2>
                 <div class="social-networks">
                     <ion-icon name="logo-twitch"></ion-icon>
@@ -29,11 +29,21 @@
                     <input type="password" placeholder="Password">
                 </div>
                 <a href="#">¿Olvidaste tu contraseña?</a>
-                <button class="button" >Iniciar Sesion</button>
+                <button tipe="submit" class="button" >Iniciar Sesion</button>
+                
             </form>
         </div>
+        <script>
+        function login(e) {
+            e.preventDefault(); // evita recargar
+
+            // te lleva a la pagina de contactos
+            window.location.href = "pages/contactos.html";
+        }
+    </script>
+
         <div class = container-form >
-            <form class="sing-up">
+            <form class="sing-up" onsubmit="login(event)">
                 <h2>Registrarse</h2>
                 <div class="social-networks">
                     <ion-icon name="logo-twitch"></ion-icon>
@@ -54,10 +64,18 @@
                     <ion-icon name="lock-closed-outline"></ion-icon>
                     <input type="password" placeholder="Password">
                 </div>
-                <button class="button">Registrarse</button>
+                <button tipe="submit" class="button">Registrarse</button>
             </form>
             </form>
         </div>
+        <script>
+        function login(e) {
+            e.preventDefault(); // evita recargar
+
+            // te lleva a la pagina de contactos
+            window.location.href = "pages/contactos.html";
+        }
+    </script>
         <div class="container-welcom">
             <div class="welcom-sing-up welcom">
                 <h3>BIENVENIDO</h3>

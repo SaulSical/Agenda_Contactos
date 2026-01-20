@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Contactos</title>
+    <link rel="stylesheet" href="/css/contactos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Ionicons para íconos -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidebar lateral con usuario arriba y menú abajo -->
+    <aside class="sidebar">
+        <!-- Tu perfil en la parte superior de la sidebar -->
+        <div class="sidebar-user">
+            <a href="perfil.html" class="profile-link">
+                <div class="user-info">
+                    <div class="foto-wrapper-header">
+                        <img src="../images/messi.png" class="usuario-foto" alt="Tu foto de perfil">
+                        <span class="status online status-header"></span>
+                    </div>
+                    <div class="user-text">
+                        <span class="nombre">craks</span>
+                        <small>Conectado</small>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Menú de opciones -->
+        <nav class="sidebar-nav">
+            <a href="nuevoContacto.html" class="sidebar-item">
+                <ion-icon name="person-add-outline"></ion-icon>
+                <span>Nuevo contacto</span>
+            </a>
+            <a href="detalleContacto.html" class="sidebar-item">
+                <ion-icon name="person-outline"></ion-icon>
+                <span>Detalle Contacto</span>
+            </a>
+            <a href="favoritos.html" class="sidebar-item">
+                <ion-icon name="star-outline"></ion-icon>
+                <span>Favoritos</span>
+            </a>
+            <a href="tareas.html" class="sidebar-item">
+                <ion-icon name="checkbox-outline"></ion-icon>
+                <span>Tareas</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <div class="main-wrapper">
+        <main class="main-content">
+            <h1>Tus Contactos</h1>
+
+            <div class="contactos-grid">
+
+                <!-- Contacto 1 -->
+                <a href="detalleContacto.html?id=1" class="contacto-card">
+                    <div class="foto-wrapper">
+                        <img src="../images/cristiano.png" class="foto-perfil" alt="Cristiano">
+                        <span class="status online"></span>
+                    </div>
+                    <h3>Cristiano</h3>
+                    <p class="status-text">En línea</p>
+                </a>
+
+                <!-- Contacto 2 -->
+                <a href="detalleContacto.html?id=2" class="contacto-card">
+                    <div class="foto-wrapper">
+                        <img src="../images/villa.png" class="foto-perfil" alt="Lionel">
+                        <span class="status offline"></span>
+                    </div>
+                    <h3>Villa</h3>
+                    <p class="status-text">Desconectado</p>
+                </a>
+
+                <!-- Contacto 3 -->
+                <a href="detalleContacto.html?id=3" class="contacto-card">
+                    <div class="foto-wrapper">
+                        <img src="../images/suarez.png" class="foto-perfil" alt="Benito">
+                        <span class="status online"></span>
+                    </div>
+                    <h3>Suarez</h3>
+                    <p class="status-text">En línea</p>
+                </a>
+
+                <!-- Contacto 4 -->
+                <a href="detalleContacto.html?id=4" class="contacto-card">
+                    <div class="foto-wrapper">
+                        <img src="../images/raul.png" class="foto-perfil" alt="Raúl">
+                        <span class="status offline"></span>
+                    </div>
+                    <h3>Raúl</h3>
+                    <p class="status-text">Desconectado</p>
+                </a>
+
+                <!-- Contacto 5 -->
+                <a href="detalleContacto.html?id=5" class="contacto-card">
+                    <div class="foto-wrapper">
+                        <img src="../images/neymar.png" class="foto-perfil" alt="Madeline">
+                        <span class="status online"></span>
+                    </div>
+                    <h3>Neymar</h3>
+                    <p class="status-text">En línea</p>
+                </a>
+
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>

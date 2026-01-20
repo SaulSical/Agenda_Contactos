@@ -1,0 +1,239 @@
+/* Reset + base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #F0F4F3;           /* mismo fondo claro del login */
+    color: #333;
+    display: flex;
+}
+
+/* Sidebar - ahora con colores del login */
+.sidebar {
+    width: 260px;
+    background: #3AB397;           /* verde principal del login */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.15); /* sombra suave como en login */
+    transition: width 0.3s ease;
+}
+
+/* Usuario arriba en sidebar */
+.sidebar-user {
+    padding: 24px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.25s;
+}
+
+.profile-link:hover {
+    opacity: 0.92;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.foto-wrapper-header {
+    position: relative;
+}
+
+.usuario-foto {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;       /* borde blanco para destacar en verde */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.status-header {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2.5px solid #3AB397;
+    background: white;             /* puntito blanco para contraste */
+}
+
+.nombre {
+    font-weight: 600;
+    font-size: 1.18rem;
+}
+
+.user-text small {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+    display: block;
+    font-weight: 500;
+}
+
+/* Menú de opciones */
+.sidebar-nav {
+    flex: 1;
+    margin-top: 15px;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.sidebar-item ion-icon {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.sidebar-item:hover {
+    background: #3AA8AD;           /* hover con el segundo verde del login */
+    transform: translateX(6px);
+}
+
+.sidebar-item:hover ion-icon {
+    opacity: 1;
+}
+
+/* Contenido principal */
+.main-wrapper {
+    flex: 1;
+    margin-left: 260px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    padding: 30px 35px;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 2.2rem;
+    text-align: left;
+}
+
+/* Grid de contactos */
+.contactos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.4rem;
+}
+
+.contacto-card {
+    background: white;
+    border-radius: 14px;
+    padding: 18px 14px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+}
+
+.contacto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(58, 179, 151, 0.18); /* sombra con verde */
+}
+
+.foto-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 12px;
+}
+
+.foto-perfil {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e8f5f3;
+}
+
+.status {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.status.online { background: #3AB397; }
+.status.offline { background: #aaa; }
+
+.contacto-card h3 {
+    font-size: 1.08rem;
+    color: #222;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.status-text {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 80px;
+    }
+    .sidebar-user .user-text span,
+    .sidebar-user .user-text small {
+        display: none;
+    }
+    .sidebar-item span {
+        display: none;
+    }
+    .sidebar-item {
+        justify-content: center;
+        padding: 18px 0;
+    }
+    .main-wrapper {
+        margin-left: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    .main-wrapper {
+        margin-left: 0;
+    }
+    .main-content {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Tareas</title>
+    <link rel="stylesheet" href="../css/tareas.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Ionicons para íconos del menú -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <!-- Sidebar lateral (igual en todas las páginas protegidas) -->
+    <aside class="sidebar">
+        <!-- Perfil del usuario arriba -->
+        <div class="sidebar-user">
+            <a href="perfil.html" class="profile-link">
+                <div class="user-info">
+                    <div class="foto-wrapper-header">
+                        <img src="../images/messi.png" class="usuario-foto" alt="Foto de perfil">
+                        <span class="status online status-header"></span>
+                    </div>
+                    <div class="user-text">
+                        <span class="nombre">craks</span>
+                        <small>craks@gmail.com</small>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Menú -->
+        <nav class="sidebar-nav">
+            <a href="contactos.html" class="sidebar-item">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+                <span>Volver</span>
+            </a>
+            <a href="../index.html" class="sidebar-item btn-cerrar">
+                <ion-icon name="log-out-outline"></ion-icon>
+                <span>Cerrar sesión</span>
+            </a>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <div class="main-wrapper">
+        <main class="main-content">
+            <h1>Mis Tareas</h1>
+
+            <div class="tareas-container">
+                <form class="form-tarea">
+                    <div class="input-group">
+                        <input type="text" id="tarea" placeholder="Escribe una tarea..." required>
+                    </div>
+                    <div class="input-group">
+                        <select id="prioridad">
+                            <option value="alta">Alta prioridad</option>
+                            <option value="media">Media prioridad</option>
+                            <option value="baja">Baja prioridad</option>
+                        </select>
+                    </div>
+                    <button type="button" class="button" onclick="agregarTarea()">Agregar Tarea</button>
+                </form>
+
+                <ul id="lista" class="lista-tareas"></ul>
+            </div>
+        </main>
+    </div>
+
+    <!-- JavaScript separado -->
+    <script src="../js/tareas.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #F0F4F3;
+    display: flex;
+    color: #333;
+}
+
+/* Sidebar (igual que en las otras páginas) */
+.sidebar {
+    width: 260px;
+    background: #3AB397;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+}
+
+.sidebar-user {
+    padding: 24px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.18);
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    transition: all 0.25s;
+}
+
+.profile-link:hover {
+    background: rgba(255,255,255,0.12);
+    border-radius: 8px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.foto-wrapper-header {
+    position: relative;
+}
+
+.usuario-foto {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+.status-header {
+    position: absolute;
+    bottom: 3px;
+    right: 3px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2.5px solid #3AB397;
+    background: white;
+}
+
+.nombre {
+    font-weight: 600;
+    font-size: 1.15rem;
+}
+
+.user-text small {
+    color: rgba(255,255,255,0.9);
+    font-size: 0.88rem;
+    display: block;
+}
+
+.sidebar-nav {
+    flex: 1;
+    margin-top: 15px;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 15px 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.25s;
+}
+
+.sidebar-item ion-icon {
+    font-size: 1.5rem;
+    opacity: 0.9;
+}
+
+.sidebar-item:hover {
+    background: #3AA8AD;
+}
+
+.btn-cerrar {
+    margin-top: auto;
+}
+
+/* Contenido principal */
+.main-wrapper {
+    flex: 1;
+    margin-left: 260px;
+    padding: 30px;
+}
+
+.main-content {
+    flex: 1;
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Contenedor de tareas */
+.tareas-container {
+    background: white;
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Formulario */
+.form-tarea {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    width: 100%;
+    height: 50px;
+    background-color: #EEEEEE;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+}
+
+.input-group input::placeholder,
+.input-group select {
+    color: #999;
+}
+
+.button {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #3AB397;
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background-color: #3AA8AD;
+    transform: translateY(-2px);
+}
+
+/* Lista de tareas */
+.lista-tareas {
+    list-style: none;
+}
+
+.tarea {
+    background-color: #f8f9fa;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Prioridades (bordes de color) */
+.alta { border-left: 5px solid #e53935; }
+.media { border-left: 5px solid #fbc02d; }
+.baja { border-left: 5px solid #43a047; }
+
+.tarea span {
+    flex: 1;
+    font-size: 15px;
+    color: #333;
+}
+
+/* Botones de acción */
+.acciones button {
+    margin-left: 10px;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.btn-editar {
+    background-color: #ffd54f;
+    color: #333;
+}
+
+.btn-eliminar {
+    background-color: #ef5350;
+    color: white;
+}
+
+.btn-editar:hover { background-color: #ffca28; }
+.btn-eliminar:hover { background-color: #e53935; }
+
+/* Responsivo */
+@media (max-width: 992px) {
+    .sidebar { width: 80px; }
+    .sidebar-user .user-text span,
+    .sidebar-user .user-text small,
+    .sidebar-item span { display: none; }
+    .sidebar-item { justify-content: center; padding: 16px 0; }
+    .main-wrapper { margin-left: 80px; }
+}
+
+@media (max-width: 768px) {
+    .sidebar { width: 0; overflow: hidden; }
+    .main-wrapper { margin-left: 0; }
+    .tareas-container { padding: 30px 20px; }
+}
